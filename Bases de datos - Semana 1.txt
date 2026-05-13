@@ -1,0 +1,65 @@
+- Datos
+Son hechos
+
+- Información
+Resultado del proceso de datos (hechos), dando un significado y contexto.
+
+- SQL Server
+Un gestor de bases de datos relacional desarrollado por Microsoft
+Relacional = Van a tener columnas y filas (SQL, MySQL)
+No relacionales = Son corchetes hacia abajo, como un JSON (MongoDB, Postgress)
+
+- SQL Server > Aplicacion para manejar SQL (Management Studio)
+
+===============================
+	Tipos de Datos
+===============================
+- Numéricos:
+Bit: 0,1,NULL
+Int: Almacena valores enteros
+Decimal: Almacena datos númericos sin redondear, P precision y S escala de valores.
+float: Almacena valores decimales
+money: Representa valores monetarios
+
+- Fecha y hora:
+Date time: agarra el día y la hora con segundos
+date: define una fecha AAAA/MM/DD
+time: solo agarre la hora, minutos, segundos
+smallDateTime: fecha y hora con formato de 24 horas.
+
+- Strings:
+Char (N): almacena N caracteres en formato ASCII, un byte por cada letra, utiliza N N caracteres necesarios.
+	- - Utilizado para almacenar cadenas de texto de longitud fija.
+
+Varchar (N): almacena N caracteres en formato ASCII, un byte por cada letra, utiliza N caracteres necesarios.
+	- Utilizado para almacenar cadenas de texto de longitud variable.
+
+Nchar (N): almacena N caracteres en formato UNICODE, dos byte por cada letra, utiliza N caracteres necesarios.
+
+Nvarchar (N): almacena N caracteres en formato UNICODE, dos byte por cada letra, utiliza N caracteres necesarios.
+===============================
+       Tipos de Lenguajes
+===============================
+- DDL (Data Definition Language): todo lo relacionado con la base de datos como tablas, vistas, procedimientos almacenados, funciones, etc.
+	- CREATE
+	- ALTER 
+	- DROP (delete)
+
+- DML (Data Manipulation Language): es todo lo relacionado con los datos como agregar, modificar, buscr, eliminar datos. 
+	- INSERT (Save)
+	- UPDATE
+	- DELETE
+	- SELECT
+
+===============================
+       	  Practica #1
+===============================
+Se le contrata para guardar la información de pacientes de un dentista, se requiere guardar los siguientes datos:
+
+- Doctor que atendió
+- Tratamiento
+- Nombre del paciente
+- Fecha y hora de la cita
+- Costo
+
+
