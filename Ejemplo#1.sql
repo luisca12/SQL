@@ -1,5 +1,5 @@
 /*
-First DB practice
+First DB example
 */
 
 create databse dbUltinaStudents --To create a DB
@@ -14,4 +14,16 @@ create table tStudents(     -- To create a Table
     signUpDate date,
     major nvarchar(20)        
 );
+
+alter table tStudents       -- To add a attribute (column)
+add email nvarchar(30),     -- Adds the email column to table tStudents
+add country nvarchar(20);
+
+alter table tStudents       -- To modify a attribute (column)
+alter email nvarchar(50);   -- Modifies the character lenght of email column
+
+drop table tStudents;       -- To delete a table
+
+alter table tStudents       -- To delete a specific column
+drop email;
 
