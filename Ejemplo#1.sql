@@ -27,3 +27,12 @@ drop table tStudents;       -- To delete a table
 alter table tStudents       -- To delete a specific column
 drop email;
 
+/* First DB Homework */
+
+create table dentistaA(
+    doctor varchar(100),
+    treatment nvarchar(500),
+    patient varchar(100),
+    appDate datetime,
+    total money
+);
