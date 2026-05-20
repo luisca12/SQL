@@ -29,7 +29,10 @@ drop email;
 
 /* First DB Homework */
 
-create table dentistaA(
+create databse dbDentist
+user dbDentist;
+
+create table dentist(
     doctor varchar(100),
     treatment nvarchar(500),
     patient varchar(100),
