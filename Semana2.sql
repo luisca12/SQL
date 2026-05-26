@@ -1,4 +1,4 @@
-create database dbVet
+create database dbVet;
 
 use dbVet;
 
@@ -93,3 +93,58 @@ where idClient = 3 and firstName = 'Luis';
     -- Here we can delete something from a table
 delete from tClient where idClient = 3;
 
+/* Second DB Homework */
+
+create database dbStreaming;
+use dbStreaming;
+
+create table tUser(
+    userID INT Primary key,
+    firstName varchar(25) not null,
+    surname varchar(40) not null,
+    phoneNum varchar(20) unique,
+    age int Check(age >=18),
+    email nvarchar(60) unique
+);
+
+create table tVideos(
+    videoID INT Primary key,
+    userID INT,
+    videoName nvarchar(120) not null,
+    videoDesc nvarchar(300),
+    videoLeng int, -- Duracion del video
+    videoView int  default 0, -- Vistas del video
+
+    Foreign KEY (userID) REFERENCES tUser(userID)
+);
+
+create table tVideoRevenue(
+    revenueID INT Primary key,
+    videoID int,
+    revenueAmount money,
+    revenueDate datetime,
+    revenueApproved varchar(30), -- Para comentarios relacionado al dinero generado
+
+    Foreign KEY (videoID) REFERENCES tVideos(videoID)
+);
+
+insert into tUser values
+(1, 'Luis', 'Alfaro','1000',24,'user@gmail.com'),
+(2, 'Jaz', 'Mora','1001',20,'user1@gmail.com'),
+(3, 'Nicole', 'Martrinez','1010',30,'user2@gmail.com'),
+(4, 'Michelle', 'Solera','1011',19,'user3@gmail.com'),
+(5, 'Gloriana', 'Alvarado','1100',18,'user4@gmail.com');
+
+insert into tVideos values
+(1, 1, 'Video 0', null, 10, 10),
+(2, 2, 'Video 1', 'prueba 1', 10, 10),
+(3, 3, 'Video 2', 'comida japonesa', 10, 10),
+(4, 4, 'Video 3', 'luisito no comunica', 10, 10),
+(5, 5, 'Video 4', 'luisito descomunica?', 10, 10);
+
+insert into tVideoRevenue values
+(1, 1, 1.75, '2026-05-26 16:30:00', 'Denegado'),
+(2, 2, 520.75, '2026-05-26 16:30:00', 'Aprobado'),
+(3, 3, 1520.75, '2026-05-26 16:30:00', 'Denegado'),
+(4, 4, 99999999, '2026-05-26 16:30:00', 'Aprobado'),
+(5, 5, 10000000, '2026-05-26 16:30:00', 'Aprobado');
