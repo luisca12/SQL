@@ -1,4 +1,4 @@
-create table dbVet
+create database dbVet
 
 use dbVet;
 
